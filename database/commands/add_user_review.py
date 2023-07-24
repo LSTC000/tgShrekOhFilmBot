@@ -5,7 +5,7 @@ from asyncpg import UniqueViolationError
 from database import Reviews
 
 
-async def add_user_alert(user_id: int, review: str) -> None:
+async def add_user_review(user_id: int, review: str) -> None:
     '''
     :param user_id: Telegram user id.
     :param review: User review.
