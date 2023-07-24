@@ -1,6 +1,6 @@
 from database.database_setup import BaseModel
 
-from sqlalchemy import Column, BigInteger, TEXT, DateTime, sql, func
+from sqlalchemy import Column, BigInteger, VARCHAR, DateTime, sql, func
 
 
 class Reviews(BaseModel):
@@ -12,7 +12,7 @@ class Reviews(BaseModel):
     # Telegram user id.
     user_id = Column(BigInteger, nullable=False)
     # User review.
-    review = Column(TEXT, nullable=False)
+    review = Column(VARCHAR(2048), nullable=False)
     # Created review date.
     created_date = Column(DateTime(True), server_default=func.now())
 
