@@ -17,5 +17,6 @@ YOOMONEY_PAYMENT_IKB_MESSAGE = 'YooMoney'
 YOOMONEY_PAYMENT_URL_IKB_MESSAGE = 'Оплатить'
 DONATION_ALERTS_PAYMENT_URL_IKB_MESSAGE = 'Donation Alerts'
 # SOCIALS.
-SOCIAL_TIK_TOK_CHANNEL_URL_IKB_MESSAGE = '📱 Наш TikTok'
-SOCIAL_OFFICIAL_TG_GROUP_IKB_MESSAGE = '📨 Наша группа в telegram'
+SOCIAL_TIK_TOK_CHANNEL_URL_IKB_MESSAGE = '📱 Основной TikTok'
+SOCIAL_TIK_TOK_LSTC_CHANNEL_URL_IKB_MESSAGE = '📱 Второй TikTok'
+SOCIAL_OFFICIAL_TG_GROUP_IKB_MESSAGE = '📨 Группа в telegram'
