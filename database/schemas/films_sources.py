@@ -8,7 +8,7 @@ class FilmsSources(BaseModel):
 
     # Autoincrement id.
     id = Column(BigInteger, primary_key=True, autoincrement=True,
-                server_default=sql.text('nextval(\'reviews_id_seq\')'))
+                server_default=sql.text('nextval(\'films_sources_id_seq\')'))
     # Film info code id.
     code_id = Column(Integer, nullable=False)
     # Name of source.
