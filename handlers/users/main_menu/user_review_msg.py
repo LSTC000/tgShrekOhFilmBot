@@ -4,7 +4,7 @@ from data.messages import ERROR_ENTER_USER_REVIEW_MESSAGE, SUCCESSFUL_ENTER_USER
 
 from database import add_user_review
 
-from functions import call_main_menu_ikb
+from functions import call_main_menu_ikb, check_user_alert_cache
 
 from states import MainMenuStatesGroup
 
@@ -29,7 +29,7 @@ async def user_review_msg(message: types.Message, state: FSMContext) -> None:
         # Inform the user about an error when entering the review.
         await bot.send_message(chat_id=user_id, text=ERROR_ENTER_USER_REVIEW_MESSAGE)
 
-    # Call payment inline menu.
-    await call_main_menu_ikb(user_id=user_id, state=state)
+    # Call main inline menu.
+    await call_main_menu_ikb(user_id=user_id, alert=await check_user_alert_cache(user_id), state=state)
     # Set main_menu state.
     await MainMenuStatesGroup.main_menu.set()
