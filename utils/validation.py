@@ -24,3 +24,11 @@ class Validator:
             return False
 
         return True
+
+    def user_review_validation(self, review: str) -> bool:
+        """
+        :param review: User review.
+        :return: True if review is valid, else - False
+        """
+
+        return True if review and len(review) <= 2048 else False
