@@ -12,7 +12,7 @@ class Reviews(BaseModel):
     # Telegram user id.
     user_id = Column(BigInteger, nullable=False)
     # User review.
-    review = Column(TEXT, nullable=True)
+    review = Column(TEXT, nullable=False)
     # Created review date.
     created_date = Column(DateTime(True), server_default=func.now())
 
