@@ -1,13 +1,16 @@
 from database.database_setup import BaseModel
 
-from sqlalchemy import Column, Integer, BOOLEAN, VARCHAR, DateTime, sql, func
+from sqlalchemy import Column, BigInteger, Integer, BOOLEAN, VARCHAR, DateTime, sql, func
 
 
 class FilmsSources(BaseModel):
     __tablename__ = 'films_sources'
 
+    # Autoincrement id.
+    id = Column(BigInteger, primary_key=True, autoincrement=True,
+                server_default=sql.text('nextval(\'reviews_id_seq\')'))
     # Film info code id.
-    code_id = Column(Integer, primary_key=True, nullable=False)
+    code_id = Column(Integer, nullable=False)
     # Name of source.
     source_name = Column(VARCHAR(32), nullable=False)
     # Link of source.
