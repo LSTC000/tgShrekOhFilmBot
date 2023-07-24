@@ -1,6 +1,6 @@
 from database.database_setup import BaseModel
 
-from sqlalchemy import Column, Integer, SmallInteger, BINARY, TEXT, DateTime, sql, func
+from sqlalchemy import Column, Integer, SmallInteger, TEXT, DateTime, sql, func
 
 
 class FilmsInfo(BaseModel):
@@ -15,7 +15,7 @@ class FilmsInfo(BaseModel):
     # Score of the film.
     film_score = Column(SmallInteger, nullable=False)
     # Image preview of the film.
-    film_image = Column(BINARY, nullable=False)
+    film_image = Column(TEXT, nullable=False)
     # Description of the film.
     film_desc = Column(TEXT, nullable=False)
     # Created film info date.
