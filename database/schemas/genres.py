@@ -9,7 +9,7 @@ class Genres(BaseModel):
     # Genre id.
     genre_id = Column(Integer, primary_key=True, nullable=False)
     # Genre name.
-    genre_name = Column(VARCHAR(32), nullable=True)
+    genre_name = Column(VARCHAR(32), nullable=False)
     # Created genre date.
     created_date = Column(DateTime(True), server_default=func.now())
 
