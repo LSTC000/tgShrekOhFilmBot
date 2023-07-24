@@ -4,6 +4,7 @@ __all__ = [
     'Genres',
     'Films',
     'FilmsInfo',
+    'FilmsSources',
 ]
 
 
@@ -12,3 +13,4 @@ from .reviews import Reviews
 from .genres import Genres
 from .films import Films
 from .films_info import FilmsInfo
+from .films_sources import FilmsSources
