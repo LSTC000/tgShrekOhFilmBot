@@ -1,6 +1,6 @@
 from database.database_setup import BaseModel
 
-from sqlalchemy import Column, Integer, SmallInteger, TEXT, LargeBinary, DateTime, sql, func
+from sqlalchemy import Column, Integer, SmallInteger, VARCHAR, TEXT, LargeBinary, DateTime, sql, func
 
 
 class FilmsInfo(BaseModel):
@@ -18,6 +18,8 @@ class FilmsInfo(BaseModel):
     film_image = Column(LargeBinary, nullable=False)
     # Description of the film.
     film_desc = Column(TEXT, nullable=False)
+    # More film info link.
+    film_info_link = Column(VARCHAR(2048), nullable=True)
     # Created film info date.
     created_date = Column(DateTime(True), server_default=func.now())
 
